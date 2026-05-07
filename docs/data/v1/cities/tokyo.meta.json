@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-05-07T22:34:21Z",
+  "sourceCommit": "c2e3b83",
+  "inputChecksum": "9b3ce126c9d98ebfbf75a64229938e3873d6664986eb666b88413df40d55037e",
+  "schemaVersion": "v1",
+  "generator": "cmd/build-index",
+  "sourceFile": "data/source/cities/tokyo.json",
+  "artifactFile": "docs/data/v1/cities/tokyo.json",
+  "libosmscoutAbi": "normalized-city-export-v1"
+}

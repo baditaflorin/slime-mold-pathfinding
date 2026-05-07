@@ -1,0 +1,302 @@
+{
+  "schemaVersion": "v1",
+  "city": {
+    "slug": "bucharest",
+    "name": "Bucharest",
+    "country": "Romania",
+    "bounds": [
+      26,
+      44.34,
+      26.22,
+      44.52
+    ],
+    "projection": "normalized-web-mercator-fixture"
+  },
+  "source": {
+    "name": "Libosmscout-compatible Bucharest metro fixture",
+    "attribution": "Synthetic normalized city graph inspired by public station geography; replace with a local OpenStreetMap/libosmscout export for planning work.",
+    "license": "MIT for fixture structure; real OSM exports must preserve ODbL attribution.",
+    "url": "https://github.com/baditaflorin/slime-mold-pathfinding"
+  },
+  "nodes": [
+    {
+      "id": "basarab",
+      "label": "Basarab",
+      "kind": "station",
+      "x": 0.42,
+      "y": 0.35
+    },
+    {
+      "id": "berceni",
+      "label": "Berceni",
+      "kind": "station",
+      "x": 0.64,
+      "y": 0.9
+    },
+    {
+      "id": "dristor",
+      "label": "Dristor",
+      "kind": "station",
+      "x": 0.72,
+      "y": 0.63
+    },
+    {
+      "id": "eroilor",
+      "label": "Eroilor",
+      "kind": "station",
+      "x": 0.41,
+      "y": 0.52
+    },
+    {
+      "id": "gara-de-nord",
+      "label": "Gara de Nord",
+      "kind": "station",
+      "x": 0.39,
+      "y": 0.41
+    },
+    {
+      "id": "grozavesti",
+      "label": "Grozavesti",
+      "kind": "station",
+      "x": 0.32,
+      "y": 0.51
+    },
+    {
+      "id": "herastrau",
+      "label": "Herastrau",
+      "kind": "park",
+      "x": 0.48,
+      "y": 0.18
+    },
+    {
+      "id": "obor",
+      "label": "Obor",
+      "kind": "station",
+      "x": 0.7,
+      "y": 0.35
+    },
+    {
+      "id": "piata-unirii",
+      "label": "Piata Unirii",
+      "kind": "station",
+      "x": 0.56,
+      "y": 0.6
+    },
+    {
+      "id": "pipera",
+      "label": "Pipera",
+      "kind": "station",
+      "x": 0.61,
+      "y": 0.12
+    },
+    {
+      "id": "romana",
+      "label": "Piata Romana",
+      "kind": "station",
+      "x": 0.53,
+      "y": 0.38
+    },
+    {
+      "id": "universitate",
+      "label": "Universitate",
+      "kind": "station",
+      "x": 0.56,
+      "y": 0.49
+    }
+  ],
+  "edges": [
+    {
+      "id": "basarab-gara",
+      "from": "basarab",
+      "to": "gara-de-nord",
+      "mode": "metro",
+      "name": "M1 interchange",
+      "weight": 0.5
+    },
+    {
+      "id": "berceni-dristor",
+      "from": "berceni",
+      "to": "dristor",
+      "mode": "metro",
+      "name": "M2 south arc",
+      "weight": 1.8
+    },
+    {
+      "id": "dristor-obor",
+      "from": "dristor",
+      "to": "obor",
+      "mode": "metro",
+      "name": "Eastern ring",
+      "weight": 1.2
+    },
+    {
+      "id": "dristor-unirii",
+      "from": "dristor",
+      "to": "piata-unirii",
+      "mode": "metro",
+      "name": "M1 east",
+      "weight": 0.9
+    },
+    {
+      "id": "eroilor-gara",
+      "from": "eroilor",
+      "to": "gara-de-nord",
+      "mode": "metro",
+      "name": "M1 west",
+      "weight": 0.9
+    },
+    {
+      "id": "eroilor-grozavesti",
+      "from": "eroilor",
+      "to": "grozavesti",
+      "mode": "metro",
+      "name": "Dambovita west",
+      "weight": 0.7
+    },
+    {
+      "id": "eroilor-unirii",
+      "from": "eroilor",
+      "to": "piata-unirii",
+      "mode": "metro",
+      "name": "Civic axis",
+      "weight": 1
+    },
+    {
+      "id": "gara-romana",
+      "from": "gara-de-nord",
+      "to": "romana",
+      "mode": "tram",
+      "name": "North center",
+      "weight": 0.9
+    },
+    {
+      "id": "herastrau-pipera",
+      "from": "herastrau",
+      "to": "pipera",
+      "mode": "metro",
+      "name": "M2 north",
+      "weight": 0.8
+    },
+    {
+      "id": "obor-romana",
+      "from": "obor",
+      "to": "romana",
+      "mode": "tram",
+      "name": "Inner north",
+      "weight": 1.1
+    },
+    {
+      "id": "piata-unirii-berceni",
+      "from": "piata-unirii",
+      "to": "berceni",
+      "mode": "metro",
+      "name": "M2 south",
+      "weight": 1.6
+    },
+    {
+      "id": "pipera-romana",
+      "from": "pipera",
+      "to": "romana",
+      "mode": "metro",
+      "name": "M2 north spine",
+      "weight": 1.4
+    },
+    {
+      "id": "romana-universitate",
+      "from": "romana",
+      "to": "universitate",
+      "mode": "metro",
+      "name": "Central M2",
+      "weight": 0.6
+    },
+    {
+      "id": "unirii-universitate",
+      "from": "piata-unirii",
+      "to": "universitate",
+      "mode": "metro",
+      "name": "Old center",
+      "weight": 0.5
+    }
+  ],
+  "layers": [
+    {
+      "id": "dambovita",
+      "label": "Dambovita",
+      "kind": "river",
+      "points": [
+        {
+          "x": 0.12,
+          "y": 0.57
+        },
+        {
+          "x": 0.32,
+          "y": 0.53
+        },
+        {
+          "x": 0.55,
+          "y": 0.58
+        },
+        {
+          "x": 0.85,
+          "y": 0.61
+        }
+      ]
+    },
+    {
+      "id": "parks-north",
+      "label": "Northern lakes",
+      "kind": "park",
+      "points": [
+        {
+          "x": 0.36,
+          "y": 0.15
+        },
+        {
+          "x": 0.52,
+          "y": 0.1
+        },
+        {
+          "x": 0.66,
+          "y": 0.2
+        },
+        {
+          "x": 0.47,
+          "y": 0.26
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "id": "east-west",
+      "label": "East-west balance",
+      "nodeIds": [
+        "grozavesti",
+        "eroilor",
+        "dristor",
+        "obor"
+      ]
+    },
+    {
+      "id": "metro-core",
+      "label": "Metro core",
+      "nodeIds": [
+        "gara-de-nord",
+        "piata-unirii",
+        "pipera",
+        "berceni"
+      ]
+    },
+    {
+      "id": "north-central",
+      "label": "North-central",
+      "nodeIds": [
+        "pipera",
+        "herastrau",
+        "romana",
+        "universitate",
+        "piata-unirii"
+      ]
+    }
+  ]
+}

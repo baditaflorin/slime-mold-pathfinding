@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "v1",
+  "city": {
+    "slug": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan",
+    "bounds": [139.56, 35.53, 139.93, 35.82],
+    "projection": "normalized-web-mercator-fixture"
+  },
+  "source": {
+    "name": "Libosmscout-compatible Tokyo rail fixture",
+    "attribution": "Synthetic normalized city graph inspired by public station geography; replace with a local OpenStreetMap/libosmscout export for planning work.",
+    "license": "MIT for fixture structure; real OSM exports must preserve ODbL attribution.",
+    "url": "https://github.com/baditaflorin/slime-mold-pathfinding"
+  },
+  "nodes": [
+    { "id": "akihabara", "label": "Akihabara", "kind": "station", "x": 0.61, "y": 0.39 },
+    { "id": "asakusa", "label": "Asakusa", "kind": "station", "x": 0.72, "y": 0.32 },
+    { "id": "ginza", "label": "Ginza", "kind": "station", "x": 0.58, "y": 0.52 },
+    { "id": "haneda", "label": "Haneda", "kind": "airport", "x": 0.68, "y": 0.88 },
+    { "id": "ikebukuro", "label": "Ikebukuro", "kind": "station", "x": 0.39, "y": 0.19 },
+    { "id": "meguro", "label": "Meguro", "kind": "station", "x": 0.36, "y": 0.68 },
+    { "id": "odaiba", "label": "Odaiba", "kind": "waterfront", "x": 0.68, "y": 0.68 },
+    { "id": "roppongi", "label": "Roppongi", "kind": "station", "x": 0.45, "y": 0.57 },
+    { "id": "shibuya", "label": "Shibuya", "kind": "station", "x": 0.29, "y": 0.56 },
+    { "id": "shinagawa", "label": "Shinagawa", "kind": "station", "x": 0.47, "y": 0.74 },
+    { "id": "shinjuku", "label": "Shinjuku", "kind": "station", "x": 0.27, "y": 0.34 },
+    { "id": "sumida", "label": "Sumida", "kind": "river", "x": 0.74, "y": 0.47 },
+    { "id": "tokyo", "label": "Tokyo", "kind": "station", "x": 0.57, "y": 0.46 },
+    { "id": "ueno", "label": "Ueno", "kind": "station", "x": 0.59, "y": 0.29 },
+    { "id": "yokohama", "label": "Yokohama", "kind": "station", "x": 0.28, "y": 0.93 }
+  ],
+  "edges": [
+    { "id": "akihabara-asakusa", "from": "akihabara", "to": "asakusa", "mode": "rail", "name": "Tsukuba connector", "weight": 1.1 },
+    { "id": "akihabara-tokyo", "from": "akihabara", "to": "tokyo", "mode": "rail", "name": "Yamanote east", "weight": 0.8 },
+    { "id": "akihabara-ueno", "from": "akihabara", "to": "ueno", "mode": "rail", "name": "Yamanote north", "weight": 0.7 },
+    { "id": "asakusa-sumida", "from": "asakusa", "to": "sumida", "mode": "tram", "name": "Sumida crossing", "weight": 0.8 },
+    { "id": "ginza-odaiba", "from": "ginza", "to": "odaiba", "mode": "rail", "name": "Bay access", "weight": 1.5 },
+    { "id": "ginza-roppongi", "from": "ginza", "to": "roppongi", "mode": "metro", "name": "Hibiya core", "weight": 1.0 },
+    { "id": "ginza-tokyo", "from": "ginza", "to": "tokyo", "mode": "metro", "name": "Marunouchi core", "weight": 0.5 },
+    { "id": "haneda-odaiba", "from": "haneda", "to": "odaiba", "mode": "rail", "name": "Airport bay line", "weight": 1.7 },
+    { "id": "haneda-shinagawa", "from": "haneda", "to": "shinagawa", "mode": "rail", "name": "Keikyu airport", "weight": 1.3 },
+    { "id": "ikebukuro-shinjuku", "from": "ikebukuro", "to": "shinjuku", "mode": "rail", "name": "Yamanote west north", "weight": 1.0 },
+    { "id": "ikebukuro-ueno", "from": "ikebukuro", "to": "ueno", "mode": "rail", "name": "Northern arc", "weight": 1.5 },
+    { "id": "meguro-shibuya", "from": "meguro", "to": "shibuya", "mode": "rail", "name": "Yamanote southwest", "weight": 0.9 },
+    { "id": "meguro-shinagawa", "from": "meguro", "to": "shinagawa", "mode": "rail", "name": "Yamanote south", "weight": 0.8 },
+    { "id": "odaiba-sumida", "from": "odaiba", "to": "sumida", "mode": "waterbus", "name": "Waterfront link", "weight": 1.2 },
+    { "id": "roppongi-shibuya", "from": "roppongi", "to": "shibuya", "mode": "metro", "name": "Urban diagonal", "weight": 1.1 },
+    { "id": "roppongi-tokyo", "from": "roppongi", "to": "tokyo", "mode": "metro", "name": "Central diagonal", "weight": 1.0 },
+    { "id": "shibuya-shinjuku", "from": "shibuya", "to": "shinjuku", "mode": "rail", "name": "Yamanote west", "weight": 1.0 },
+    { "id": "shinagawa-ginza", "from": "shinagawa", "to": "ginza", "mode": "rail", "name": "Tokaido approach", "weight": 1.1 },
+    { "id": "shinagawa-yokohama", "from": "shinagawa", "to": "yokohama", "mode": "rail", "name": "Tokaido south", "weight": 2.1 },
+    { "id": "shinjuku-roppongi", "from": "shinjuku", "to": "roppongi", "mode": "metro", "name": "Oedo spine", "weight": 1.2 },
+    { "id": "sumida-tokyo", "from": "sumida", "to": "tokyo", "mode": "metro", "name": "Eastern access", "weight": 1.3 },
+    { "id": "tokyo-ueno", "from": "tokyo", "to": "ueno", "mode": "rail", "name": "Yamanote east north", "weight": 1.0 },
+    { "id": "yokohama-haneda", "from": "yokohama", "to": "haneda", "mode": "rail", "name": "Bay south", "weight": 1.6 }
+  ],
+  "layers": [
+    {
+      "id": "tokyo-bay",
+      "label": "Tokyo Bay",
+      "kind": "water",
+      "points": [
+        { "x": 0.58, "y": 0.63 },
+        { "x": 0.78, "y": 0.62 },
+        { "x": 0.88, "y": 0.88 },
+        { "x": 0.38, "y": 0.98 },
+        { "x": 0.46, "y": 0.76 }
+      ]
+    },
+    {
+      "id": "sumida-river",
+      "label": "Sumida River",
+      "kind": "river",
+      "points": [
+        { "x": 0.76, "y": 0.18 },
+        { "x": 0.72, "y": 0.32 },
+        { "x": 0.74, "y": 0.48 },
+        { "x": 0.68, "y": 0.66 }
+      ]
+    }
+  ],
+  "presets": [
+    { "id": "classic-tokyo", "label": "Tokyo study", "nodeIds": ["tokyo", "shinjuku", "shibuya", "ueno", "shinagawa"] },
+    { "id": "airport-bay", "label": "Airport and bay", "nodeIds": ["haneda", "shinagawa", "odaiba", "tokyo"] },
+    { "id": "north-south", "label": "North-south spine", "nodeIds": ["ikebukuro", "ueno", "tokyo", "shinagawa", "yokohama"] }
+  ]
+}

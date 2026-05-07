@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "v1",
+  "cities": [
+    {
+      "slug": "bucharest",
+      "name": "Bucharest",
+      "country": "Romania",
+      "dataUrl": "bucharest.json",
+      "metaUrl": "bucharest.meta.json",
+      "nodeCount": 12,
+      "edgeCount": 14,
+      "description": "Libosmscout-compatible Bucharest metro fixture"
+    },
+    {
+      "slug": "tokyo",
+      "name": "Tokyo",
+      "country": "Japan",
+      "dataUrl": "tokyo.json",
+      "metaUrl": "tokyo.meta.json",
+      "nodeCount": 15,
+      "edgeCount": 23,
+      "description": "Libosmscout-compatible Tokyo rail fixture"
+    }
+  ]
+}
