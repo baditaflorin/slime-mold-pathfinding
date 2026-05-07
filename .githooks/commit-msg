@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+set -eu
+
+message_file="$1"
+first_line="$(head -n 1 "$message_file")"
+
+case "$first_line" in
+  feat:\ *|fix:\ *|docs:\ *|chore:\ *|refactor:\ *|test:\ *|ops:\ *|data:\ *)
+    exit 0
+    ;;
+  feat\(*\):\ *|fix\(*\):\ *|docs\(*\):\ *|chore\(*\):\ *|refactor\(*\):\ *|test\(*\):\ *|ops\(*\):\ *|data\(*\):\ *)
+    exit 0
+    ;;
+  *)
+    printf 'Commit message must use Conventional Commits: %s\n' "$first_line" >&2
+    exit 1
+    ;;
+esac

@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+set -eu
+
+gofmt -w cmd internal
+
+if command -v goimports >/dev/null 2>&1; then
+  goimports -w cmd internal
+else
+  printf 'goimports not found; skipped\n'
+fi
+
+go vet ./cmd/... ./internal/...
+
+if command -v golangci-lint >/dev/null 2>&1; then
+  golangci-lint run
+else
+  printf 'golangci-lint not found; skipped\n'
+fi
+
+npm run lint
+npm run fmt:check
+npx tsc --noEmit
+
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks protect --staged --redact
+else
+  printf 'gitleaks not found; skipped\n'
+fi
