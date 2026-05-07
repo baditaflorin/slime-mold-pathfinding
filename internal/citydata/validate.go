@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// ValidateCity checks graph integrity and normalized coordinate bounds.
 func ValidateCity(city CityArtifact) error {
 	if strings.TrimSpace(city.SchemaVersion) == "" {
 		return fmt.Errorf("schemaVersion is required")

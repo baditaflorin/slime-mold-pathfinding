@@ -24,7 +24,7 @@ func TestBuildAllWritesArtifacts(t *testing.T) {
   "layers": [],
   "presets": [{"id": "pair", "label": "Pair", "nodeIds": ["a", "b"]}]
 }`
-	if err := os.WriteFile(filepath.Join(sourceDir, "testopolis.json"), []byte(source), 0o644); err != nil {
+	if err := os.WriteFile(filepath.Join(sourceDir, "testopolis.json"), []byte(source), 0o600); err != nil {
 		t.Fatalf("write source: %v", err)
 	}
 

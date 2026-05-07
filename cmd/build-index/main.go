@@ -1,3 +1,4 @@
+// Command build-index generates static city data artifacts for GitHub Pages.
 package main
 
 import (

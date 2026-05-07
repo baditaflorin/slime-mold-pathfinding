@@ -12,7 +12,7 @@ fi
 go vet ./cmd/... ./internal/...
 
 if command -v golangci-lint >/dev/null 2>&1; then
-  golangci-lint run
+  golangci-lint run ./cmd/... ./internal/...
 else
   printf 'golangci-lint not found; skipped\n'
 fi

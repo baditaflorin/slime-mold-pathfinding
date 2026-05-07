@@ -14,6 +14,7 @@ import (
 	"time"
 )
 
+// BuildAll generates browser-facing city artifacts from source city files.
 func BuildAll(ctx context.Context, opts BuildOptions) ([]BuildResult, error) {
 	if opts.SchemaVersion == "" {
 		opts.SchemaVersion = "v1"
@@ -21,7 +22,7 @@ func BuildAll(ctx context.Context, opts BuildOptions) ([]BuildResult, error) {
 	if opts.Concurrency <= 0 {
 		opts.Concurrency = 1
 	}
-	if err := os.MkdirAll(opts.OutputDir, 0o755); err != nil {
+	if err := os.MkdirAll(opts.OutputDir, 0o755); err != nil { // #nosec G301 -- artifacts are public Pages files.
 		return nil, fmt.Errorf("create output dir: %w", err)
 	}
 
@@ -58,7 +59,7 @@ func BuildAll(ctx context.Context, opts BuildOptions) ([]BuildResult, error) {
 }
 
 func buildOne(filePath string, opts BuildOptions) (BuildResult, CityIndexEntry, error) {
-	raw, err := os.ReadFile(filePath)
+	raw, err := os.ReadFile(filePath) // #nosec G304 -- filePath comes from the configured source glob.
 	if err != nil {
 		return BuildResult{}, CityIndexEntry{}, fmt.Errorf("read %s: %w", filePath, err)
 	}
@@ -129,7 +130,7 @@ func writeJSON(path string, value any) error {
 	if err := encoder.Encode(value); err != nil {
 		return fmt.Errorf("encode json: %w", err)
 	}
-	return os.WriteFile(path, buffer.Bytes(), 0o644)
+	return os.WriteFile(path, buffer.Bytes(), 0o644) // #nosec G306 -- artifacts are public Pages files.
 }
 
 func checksum(raw []byte) string {
