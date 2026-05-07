@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Slime Mold Pathfinding">
+  <rect width="128" height="128" rx="24" fill="#101820"/>
+  <path d="M20 82c19-2 23-45 44-40 14 3 12 25 29 27 8 1 14-3 17-9" fill="none" stroke="#14b8a6" stroke-width="12" stroke-linecap="round"/>
+  <path d="M24 86c28-4 45-6 80-34" fill="none" stroke="#f8d24a" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="24" cy="86" r="9" fill="#f8d24a"/>
+  <circle cx="64" cy="42" r="9" fill="#f8d24a"/>
+  <circle cx="104" cy="52" r="9" fill="#f8d24a"/>
+</svg>

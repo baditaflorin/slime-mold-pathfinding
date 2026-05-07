@@ -1,0 +1,18 @@
+{
+  "name": "Slime Mold Pathfinding",
+  "short_name": "Physarum Routes",
+  "start_url": "/slime-mold-pathfinding/",
+  "scope": "/slime-mold-pathfinding/",
+  "display": "standalone",
+  "background_color": "#0c1116",
+  "theme_color": "#101820",
+  "description": "WebGPU Physarum simulator for biologically inspired transit route exploration.",
+  "icons": [
+    {
+      "src": "/slime-mold-pathfinding/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

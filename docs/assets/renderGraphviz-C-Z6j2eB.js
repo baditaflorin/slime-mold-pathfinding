@@ -1,0 +1,2 @@
+import{t as e}from"./graphviz-wasm-DgDdncuu.js";var t;async function n(n){return t??=e.load(),(await t).layout(n,`svg`,`neato`)}export{n as renderGraphvizSVG};
+//# sourceMappingURL=renderGraphviz-C-Z6j2eB.js.map
