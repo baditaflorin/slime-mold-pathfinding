@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-07T22:34:21Z",
-  "sourceCommit": "c2e3b83",
-  "inputChecksum": "af26cc215321c18ed5ea000b0072f2693c781d355ea162351aa3cd43c7e8c55b",
+  "generatedAt": "2026-05-07T22:51:20Z",
+  "sourceCommit": "f9cd5f1",
+  "inputChecksum": "1a88c5a563daef1973e1800bca8970831a0adc135462d3ae0504434c9b4473f3",
   "schemaVersion": "v1",
   "generator": "cmd/build-index",
   "sourceFile": "data/source/cities/bucharest.json",

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-07T22:34:21Z",
-  "sourceCommit": "c2e3b83",
-  "inputChecksum": "9b3ce126c9d98ebfbf75a64229938e3873d6664986eb666b88413df40d55037e",
+  "generatedAt": "2026-05-07T22:51:20Z",
+  "sourceCommit": "f9cd5f1",
+  "inputChecksum": "c28922d4610c14c32672b0d03748a6b05479fd2bbf79412117ae059b850e8b42",
   "schemaVersion": "v1",
   "generator": "cmd/build-index",
   "sourceFile": "data/source/cities/tokyo.json",
