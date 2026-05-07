@@ -1,6 +1,6 @@
 import react from "@vitejs/plugin-react";
 import { execSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { defineConfig } from "vitest/config";
 
@@ -16,6 +16,17 @@ function gitCommit(): string {
   }
 }
 
+function buildCommit(): string {
+  if (process.env.VITE_GIT_COMMIT) {
+    return process.env.VITE_GIT_COMMIT;
+  }
+  const buildCommitPath = "docs/build-commit.txt";
+  if (existsSync(buildCommitPath)) {
+    return readFileSync(buildCommitPath, "utf8").trim();
+  }
+  return gitCommit();
+}
+
 export default defineConfig({
   base: "/slime-mold-pathfinding/",
   plugins: [react()],
@@ -23,7 +34,7 @@ export default defineConfig({
     __APP_VERSION__: JSON.stringify(
       process.env.VITE_APP_VERSION ?? packageJson.version,
     ),
-    __GIT_COMMIT__: JSON.stringify(process.env.VITE_GIT_COMMIT ?? gitCommit()),
+    __GIT_COMMIT__: JSON.stringify(buildCommit()),
     __REPOSITORY_URL__: JSON.stringify(
       "https://github.com/baditaflorin/slime-mold-pathfinding",
     ),
